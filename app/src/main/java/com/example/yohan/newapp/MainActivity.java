@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
     EditText editText3;
     EditText editText4;
     EditText editText5;
-    CalendarView calendarView3;
+
 
 
     Button button;
@@ -23,7 +23,6 @@ public class MainActivity extends AppCompatActivity {
       editText3 = findViewById(R.id.editText3);
       editText4 = findViewById(R.id.editText4);
       editText5 = findViewById(R.id.editText5);
-      calendarView3 = findViewById(R.id.calendarView3);
 
       String IdNum = editText3.getText().toString();
         String year = IdNum.substring(0,2);

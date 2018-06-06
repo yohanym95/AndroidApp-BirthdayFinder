@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">NEWApp</string>
+    <string name="birthday_finder">Birthday Finder</string>
+    <string name="nic_number">NIC Number</string>
+    <string name="gender">Gender</string>
+    <string name="birthday">Birthday</string>
+    <string name="find">Find</string>
 </resources>
