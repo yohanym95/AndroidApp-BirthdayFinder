@@ -27,8 +27,8 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="71dp"
             android:text="@string/birthday_finder"
-            android:textColor="@color/colorPrimary"
-            android:textColorHighlight="@color/colorPrimary"
+            android:textColor="@color/colorPrimaryDark"
+            android:textColorHighlight="@color/colorPrimaryDark"
             android:textSize="20sp"
             android:textStyle="bold" />
 
@@ -99,8 +99,14 @@
             android:layout_alignTop="@+id/textView"
             android:layout_marginTop="-71dp"
             android:background="@color/colorPrimaryDark"
+            android:contextClickable="true"
             android:minHeight="5dp"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:tooltipText="Birthday Finder"
+            app:popupTheme="@android:color/background_dark"
+            app:title="Birthday Finder"
+            app:titleTextColor="@android:color/background_light" />
+
 
     </RelativeLayout>
 
