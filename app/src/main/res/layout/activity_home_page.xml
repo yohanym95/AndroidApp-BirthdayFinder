@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomePage">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="16dp">
+
+        <Button
+            android:id="@+id/Old_Id"
+            android:layout_width="183dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="185dp"
+            android:text="Old Id " />
+
+        <Button
+            android:id="@+id/New_Id"
+            android:layout_width="183dp"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/Old_Id"
+            android:layout_alignParentBottom="true"
+            android:layout_alignStart="@+id/Old_Id"
+            android:layout_marginBottom="237dp"
+            android:text="New Id" />
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:background="?attr/colorPrimary"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:title="Birthday Finder "
+            app:titleTextColor="@android:color/background_light" />
+
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>

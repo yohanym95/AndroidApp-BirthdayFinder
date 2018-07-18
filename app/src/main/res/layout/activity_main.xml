@@ -104,10 +104,10 @@
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"
             android:tooltipText="Birthday Finder"
             app:popupTheme="@android:color/background_light"
-            app:title="Birthday Finder"
-            app:titleTextColor="@android:color/background_light"
             app:subtitle="Old Id"
-            app:subtitleTextColor="@android:color/background_light"/>
+            app:subtitleTextColor="@android:color/background_light"
+            app:title="Birthday Finder"
+            app:titleTextColor="@android:color/background_light" />
 
 
     </RelativeLayout>
