@@ -1,5 +1,6 @@
 package com.example.yohan.newapp;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -16,15 +17,50 @@ public class Old_Id extends AppCompatActivity {
     EditText editText3;
     EditText editText4;
     EditText editText5;
-    Button button;
-    Toolbar toolbar;
+    Button button1;
+    Toolbar toolbar2;
 
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.old_id);
+        toolbar2 = findViewById(R.id.toolbar2);
+        setSupportActionBar(toolbar2);
+        button1 = findViewById(R.id.button1);
+
+    }
+
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        String msg = " ";
+        switch (item.getItemId()) {
+            case R.id.Home_Page:
+                Intent i = new Intent(this,HomePage.class);
+                startActivity(i);
+                break;
+            case R.id.About:
+                msg = "About";
+                break;
+            case R.id.Exit:
+                System.exit(0);
+                break;
+        }
+        Toast.makeText(this, msg + "checked", Toast.LENGTH_LONG).show();
+
+
+        return super.onOptionsItemSelected(item);
+
+    }
     public void onclickbutton(android.view.View View) {
         editText3 = findViewById(R.id.editText3);
         editText4 = findViewById(R.id.editText4);
         editText5 = findViewById(R.id.editText5);
-
-
         String IdNum = editText3.getText().toString();
         String year = IdNum.substring(0, 2);
         String IdNumber = IdNum.substring(2, 5);
@@ -97,42 +133,6 @@ public class Old_Id extends AppCompatActivity {
         editText4.setText(Birthday);
         editText5.setText(gender);
         //  LocalDate date = LocalDate.of();
-    }
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.old_id);
-        toolbar = findViewById(R.id.toolbar2);
-        setSupportActionBar(toolbar);
-
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        String msg = " ";
-        switch (item.getItemId()) {
-            case R.id.Home_Page:
-                msg = "Home page";
-                break;
-            case R.id.About:
-                msg = "About";
-                break;
-            case R.id.Exit:
-                msg = "Exit";
-                break;
-        }
-        Toast.makeText(this, msg + "checked", Toast.LENGTH_LONG).show();
-
-
-        return super.onOptionsItemSelected(item);
-
     }
 
 }

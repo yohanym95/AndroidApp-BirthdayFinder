@@ -81,7 +81,7 @@
 
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/button1"
             android:layout_width="117dp"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
@@ -91,7 +91,7 @@
             android:text="@string/find"
             android:textColorLink="@color/colorPrimaryDark"
             android:visibility="visible"
-            tools:ignore="OnClick" />
+             />
 
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar2"

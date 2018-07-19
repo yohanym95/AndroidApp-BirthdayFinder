@@ -1,10 +1,13 @@
 package com.example.yohan.newapp;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -13,7 +16,8 @@ public class New_Id extends AppCompatActivity {
     EditText editText3;
     EditText editText4;
     EditText editText5;
-    Toolbar toolbar;
+    Toolbar toolbar2;
+    Button button2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,22 +25,28 @@ public class New_Id extends AppCompatActivity {
         editText3 = findViewById(R.id.editText3);
         editText4 = findViewById(R.id.editText4);
         editText5 = findViewById(R.id.editText5);
-        toolbar = findViewById(R.id.toolbar2);
-        setSupportActionBar(toolbar);
+        button2 = findViewById(R.id.button2);
+        toolbar2 = findViewById(R.id.toolbar2);
+        setSupportActionBar(toolbar2);
 
 
+    }
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
     }
     public boolean onOptionsItemSelected(MenuItem item) {
         String msg = " ";
         switch (item.getItemId()) {
             case R.id.Home_Page:
-                msg = "Home page";
+                Intent i1 = new Intent(New_Id.this,HomePage.class);
+                startActivity(i1);
                 break;
             case R.id.About:
                 msg = "About";
                 break;
             case R.id.Exit:
-                msg = "Exit";
+                System.exit(0);
                 break;
         }
         Toast.makeText(this, msg + "checked", Toast.LENGTH_LONG).show();
@@ -51,7 +61,6 @@ public class New_Id extends AppCompatActivity {
         editText4 = findViewById(R.id.editText4);
         editText5 = findViewById(R.id.editText5);
 
-
         String IdNum = editText3.getText().toString();
         String year = IdNum.substring(0, 4);
         String IdNumber = IdNum.substring(4, 7);
@@ -61,7 +70,6 @@ public class New_Id extends AppCompatActivity {
         String Birthday = "";
         String day1 = "";
         //  int year1 = year
-
 
         if (day > 0) {
             if (day > 500) {
@@ -124,4 +132,6 @@ public class New_Id extends AppCompatActivity {
         editText4.setText(Birthday);
         editText5.setText(gender);
     }
+
+
 }

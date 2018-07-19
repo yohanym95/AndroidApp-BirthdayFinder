@@ -22,10 +22,10 @@
             android:layout_marginTop="216dp"
             android:background="?attr/actionModeSplitBackground"
             android:onClick="onclickbutton"
-            android:text="Old Id "
+            android:text="Old Id"
             android:textColor="@android:color/background_light"
             android:visibility="visible"
-            tools:ignore="OnClick" />
+            tools:ignore="" />
 
         <Button
             android:id="@+id/New_Id"
@@ -35,6 +35,7 @@
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="156dp"
             android:background="?attr/actionModeSplitBackground"
+            android:onClick="onclickbutton1"
             android:text="New Id"
             android:textColor="@android:color/background_light" />
 
