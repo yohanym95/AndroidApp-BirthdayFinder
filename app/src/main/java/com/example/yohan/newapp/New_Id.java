@@ -3,36 +3,58 @@ package com.example.yohan.newapp;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
-import android.widget.CalendarView;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import java.time.LocalDate;
-import java.util.Calendar;
+public class New_Id extends AppCompatActivity {
 
-
-public class MainActivity extends AppCompatActivity {
     EditText editText3;
     EditText editText4;
     EditText editText5;
-
-
-    Button button;
     Toolbar toolbar;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.new__id);
+        editText3 = findViewById(R.id.editText3);
+        editText4 = findViewById(R.id.editText4);
+        editText5 = findViewById(R.id.editText5);
+        toolbar = findViewById(R.id.toolbar2);
+        setSupportActionBar(toolbar);
 
-    public void onclickbutton(android.view.View View) {
+
+    }
+    public boolean onOptionsItemSelected(MenuItem item) {
+        String msg = " ";
+        switch (item.getItemId()) {
+            case R.id.Home_Page:
+                msg = "Home page";
+                break;
+            case R.id.About:
+                msg = "About";
+                break;
+            case R.id.Exit:
+                msg = "Exit";
+                break;
+        }
+        Toast.makeText(this, msg + "checked", Toast.LENGTH_LONG).show();
+
+
+        return super.onOptionsItemSelected(item);
+
+    }
+
+    public void onclickbutton(View view) {
         editText3 = findViewById(R.id.editText3);
         editText4 = findViewById(R.id.editText4);
         editText5 = findViewById(R.id.editText5);
 
 
         String IdNum = editText3.getText().toString();
-        String year = IdNum.substring(0, 2);
-        String IdNumber = IdNum.substring(2, 5);
+        String year = IdNum.substring(0, 4);
+        String IdNumber = IdNum.substring(4, 7);
         int day = Integer.valueOf(IdNumber);
         String gender = "";
         String month = "";
@@ -96,50 +118,10 @@ public class MainActivity extends AppCompatActivity {
             day1 = Integer.valueOf(day).toString();
 
         }
-        Birthday = 19 + "" + year + "/" + month + "/" + day1;
+        Birthday = year + "/" + month + "/" + day1;
 
         //    String Gender=gender;
         editText4.setText(Birthday);
         editText5.setText(gender);
-        //  LocalDate date = LocalDate.of();
     }
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        toolbar = findViewById(R.id.toolbar2);
-        setSupportActionBar(toolbar);
-
-
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        String msg = " ";
-        switch (item.getItemId()) {
-            case R.id.Home_Page:
-                msg = "Home page";
-                break;
-            case R.id.About:
-                msg = "About";
-                break;
-            case R.id.Exit:
-                msg = "Exit";
-                break;
-        }
-        Toast.makeText(this, msg + "checked", Toast.LENGTH_LONG).show();
-
-
-        return super.onOptionsItemSelected(item);
-
-    }
-
 }
-

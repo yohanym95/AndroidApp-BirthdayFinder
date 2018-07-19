@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:theme="@style/Theme.AppCompat.Light.NoActionBar"
-    tools:context="com.example.yohan.newapp.MainActivity"
-    tools:layout_editor_absoluteY="25dp">
+    tools:context=".New_Id">
 
 
     <RelativeLayout
@@ -90,7 +87,8 @@
             android:onClick="onclickbutton"
             android:text="@string/find"
             android:textColorLink="@color/colorPrimaryDark"
-            android:visibility="visible" />
+            android:visibility="visible"
+            tools:ignore="OnClick" />
 
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar2"
@@ -104,13 +102,11 @@
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"
             android:tooltipText="Birthday Finder"
             app:popupTheme="@android:color/background_light"
-            app:subtitle="Old Id"
+            app:subtitle="New Id"
             app:subtitleTextColor="@android:color/background_light"
             app:title="Birthday Finder"
             app:titleTextColor="@android:color/background_light" />
 
 
     </RelativeLayout>
-
-
 </android.support.constraint.ConstraintLayout>

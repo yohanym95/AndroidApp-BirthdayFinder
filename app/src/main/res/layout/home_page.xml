@@ -16,21 +16,27 @@
         <Button
             android:id="@+id/Old_Id"
             android:layout_width="183dp"
-            android:layout_height="wrap_content"
+            android:layout_height="94dp"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="185dp"
-            android:text="Old Id " />
+            android:layout_marginTop="216dp"
+            android:background="?attr/actionModeSplitBackground"
+            android:onClick="onclickbutton"
+            android:text="Old Id "
+            android:textColor="@android:color/background_light"
+            android:visibility="visible"
+            tools:ignore="OnClick" />
 
         <Button
             android:id="@+id/New_Id"
             android:layout_width="183dp"
-            android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/Old_Id"
+            android:layout_height="94dp"
             android:layout_alignParentBottom="true"
-            android:layout_alignStart="@+id/Old_Id"
-            android:layout_marginBottom="237dp"
-            android:text="New Id" />
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="156dp"
+            android:background="?attr/actionModeSplitBackground"
+            android:text="New Id"
+            android:textColor="@android:color/background_light" />
 
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
