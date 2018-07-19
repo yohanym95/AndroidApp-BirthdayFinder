@@ -56,6 +56,7 @@
             android:ems="10"
             android:hint="@string/nic_number"
             android:inputType="textPersonName"
+            android:textColorLink="?attr/actionModeSplitBackground"
             android:textSize="15sp" />
 
 
@@ -67,6 +68,7 @@
             android:ems="10"
             android:hint="@string/birthday"
             android:inputType="textPersonName"
+            android:textColorLink="?attr/actionModeSplitBackground"
             android:textSize="15sp" />
 
         <EditText
@@ -77,6 +79,7 @@
             android:ems="10"
             android:hint="@string/gender"
             android:inputType="textPersonName"
+            android:textColorLink="?attr/actionModeSplitBackground"
             android:textSize="15sp" />
 
 
@@ -96,7 +99,7 @@
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar2"
             android:layout_width="match_parent"
-            android:layout_height="52dp"
+            android:layout_height="61dp"
             android:layout_alignTop="@+id/textView"
             android:layout_marginTop="-71dp"
             android:background="@color/colorPrimaryDark"
