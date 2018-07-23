@@ -134,4 +134,8 @@ public class New_Id extends AppCompatActivity {
     }
 
 
+    public void onclickbutton2(android.view.View view) {
+        Intent intent = new Intent(New_Id.this,TextRecog.class);
+        startActivity(intent);
+    }
 }
