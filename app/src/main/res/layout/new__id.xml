@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".New_Id">
+
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
+
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="31dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="71dp"
+            android:text="@string/birthday_finder"
+            android:textColor="@color/colorPrimaryDark"
+            android:textColorHighlight="@color/colorPrimaryDark"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="19dp"
+            android:layout_marginStart="19dp"
+            android:layout_marginTop="132dp"
+            android:text="@string/nic_number"
+            android:textColor="@color/colorPrimaryDark"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/editText3"
+            android:layout_width="247dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/textView2"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:ems="10"
+            android:hint="@string/nic_number"
+            android:inputType="textPersonName"
+            android:textColorLink="?attr/actionModeSplitBackground"
+            android:textSize="15sp" />
+
+
+        <EditText
+            android:id="@+id/editText4"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:layout_centerVertical="true"
+            android:ems="10"
+            android:hint="@string/birthday"
+            android:inputType="textPersonName"
+            android:textColorLink="?attr/actionModeSplitBackground"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/editText5"
+            android:layout_width="match_parent"
+            android:layout_height="59dp"
+            android:layout_below="@+id/editText4"
+            android:ems="10"
+            android:hint="@string/gender"
+            android:inputType="textPersonName"
+            android:textColorLink="?attr/actionModeSplitBackground"
+            android:textSize="15sp" />
+
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="117dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="172dp"
+            android:onClick="onclickbutton"
+            android:text="@string/find"
+            android:textColorLink="@color/colorPrimaryDark"
+            android:visibility="visible" />
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar2"
+            android:layout_width="match_parent"
+            android:layout_height="61dp"
+            android:layout_alignParentTop="true"
+            android:background="@color/colorPrimaryDark"
+            android:contextClickable="true"
+            android:minHeight="5dp"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:tooltipText="Birthday Finder"
+            app:popupTheme="@android:color/background_light"
+            app:subtitle="New Id"
+            app:subtitleTextColor="@android:color/background_light"
+            app:title="Birthday Finder"
+            app:titleTextColor="@android:color/background_light" />
+
+
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>
