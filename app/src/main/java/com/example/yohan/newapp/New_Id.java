@@ -25,7 +25,7 @@ public class New_Id extends AppCompatActivity {
         editText3 = findViewById(R.id.editText3);
         editText4 = findViewById(R.id.editText4);
         editText5 = findViewById(R.id.editText5);
-        button2 = findViewById(R.id.button2);
+      //  button2 = findViewById(R.id.button2);
         toolbar2 = findViewById(R.id.toolbar2);
         setSupportActionBar(toolbar2);
 
@@ -134,4 +134,8 @@ public class New_Id extends AppCompatActivity {
     }
 
 
+  /*  public void onclickbutton2(android.view.View view) {
+        Intent intent = new Intent(New_Id.this,TextRecog.class);
+        startActivity(intent);
+    } */
 }
