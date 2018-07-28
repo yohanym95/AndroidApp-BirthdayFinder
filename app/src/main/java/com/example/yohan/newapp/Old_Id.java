@@ -26,7 +26,12 @@ public class Old_Id extends AppCompatActivity {
         setContentView(R.layout.old_id);
         toolbar2 = findViewById(R.id.toolbar2);
         setSupportActionBar(toolbar2);
-        button1 = findViewById(R.id.button1);
+       // button1 = findViewById(R.id.button1);
+
+      /*  Intent intent = getIntent();
+        String id = intent.getStringExtra("text");
+
+        editText3.setText(id); */
 
     }
 
@@ -136,9 +141,9 @@ public class Old_Id extends AppCompatActivity {
         //  LocalDate date = LocalDate.of();
     }
 
-    public void onclickbutton1(android.view.View view) {
-            Intent intent = new Intent(Old_Id.this,TextRecog.class);
+  /*  public void onclickbutton1(android.view.View view) {
+        Intent intent = new Intent(Old_Id.this,TextRecog.class);
         startActivity(intent);
-    }
+    } */
 }
 

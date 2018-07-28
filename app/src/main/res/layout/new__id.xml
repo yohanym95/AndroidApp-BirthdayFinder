@@ -13,20 +13,20 @@
         android:layout_height="match_parent"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp">
+        tools:layout_editor_absoluteY="176dp">
 
 
         <Button
             android:id="@+id/button4"
             android:layout_width="117dp"
             android:layout_height="wrap_content"
-            android:layout_alignTop="@+id/button2"
-            android:layout_toEndOf="@+id/textView"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="162dp"
             android:onClick="onclickbutton"
             android:text="@string/find"
             android:textColorLink="@color/colorPrimaryDark"
-            android:visibility="visible"
-            android:layout_toRightOf="@+id/textView" />
+            android:visibility="visible" />
 
         <TextView
             android:id="@+id/textView"
@@ -34,7 +34,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="71dp"
+            android:layout_marginTop="60dp"
             android:text="New Id"
             android:textColor="@color/colorPrimaryDark"
             android:textColorHighlight="@color/colorPrimaryDark"
@@ -46,15 +46,15 @@
             android:id="@+id/textView2"
             android:layout_width="90dp"
             android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
+            android:layout_marginLeft="20dp"
             android:layout_marginStart="20dp"
             android:layout_marginTop="124dp"
             android:text="@string/nic_number"
             android:textColor="@color/colorPrimaryDark"
-            android:textStyle="bold"
-            android:layout_marginLeft="20dp"
-            android:layout_alignParentLeft="true" />
+            android:textStyle="bold" />
 
         <EditText
             android:id="@+id/editText3"
@@ -92,19 +92,6 @@
             android:textColorLink="?attr/actionModeSplitBackground"
             android:textSize="15sp" />
 
-
-        <Button
-            android:id="@+id/button2"
-            android:layout_width="117dp"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_marginTop="173dp"
-            android:layout_toStartOf="@+id/textView"
-            android:onClick="onclickbutton2"
-            android:text="Capture"
-            android:textColorLink="@color/colorPrimaryDark"
-            android:visibility="visible"
-            android:layout_toLeftOf="@+id/textView" />
 
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar2"

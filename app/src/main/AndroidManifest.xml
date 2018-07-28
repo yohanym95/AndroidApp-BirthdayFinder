@@ -30,15 +30,15 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".TextRecog">
+      <!--  <activity android:name=".TextRecog">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
-        </activity>
-        <meta-data android:name="com.google.android.gms.vision.DEPENDENCIES"
-            android:value="ocr"/>
+        </activity> -->
+       <!-- <meta-data android:name="com.google.android.gms.vision.DEPENDENCIES"
+            android:value="ocr"/> -->
     </application>
 
 </manifest>

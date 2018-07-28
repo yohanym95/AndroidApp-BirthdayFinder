@@ -1,6 +1,7 @@
 package com.example.yohan.newapp;
 
 import android.Manifest;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
@@ -119,10 +120,15 @@ public class TextRecog extends AppCompatActivity {
                                 }
 
                                 textView.setText(stringBuilder.toString());
-                              //  String idno = (String) textView.getText();
-                                ///if(idno.length() ==10){
+                                StringBuilder s = new StringBuilder();
 
-                                //}
+                                if(textView.getText().toString().length()==10 && textView.getText().toString().length()==9){
+                                    String idno = textView.getText().toString();
+                               //     Intent i1 = new Intent(TextRecog.this,Old_Id.class);
+                                 //   i1.putExtra("text",idno);
+                                   // startActivity(i1);
+                                }
+
 
 
 
