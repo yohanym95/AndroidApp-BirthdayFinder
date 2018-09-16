@@ -1,8 +1,8 @@
 package com.example.yohan.newapp;
 
 import android.content.Intent;
-import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -10,27 +10,28 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+public class oldId2 extends AppCompatActivity {
 
 
 
-public class Old_Id extends AppCompatActivity {
+
     EditText editText3;
     EditText editText4;
     EditText editText5;
     Button button1;
     Toolbar toolbar2;
-
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.old_id);
         toolbar2 = findViewById(R.id.toolbar2);
         setSupportActionBar(toolbar2);
-       // button1 = findViewById(R.id.button1);
+        // button1 = findViewById(R.id.button1);
 
-       Intent intent = getIntent();
+      /*  Intent intent = getIntent();
         String id = intent.getStringExtra("text");
 
-        editText3.setText(id);
+        editText3.setText(id); */
 
     }
 
@@ -140,9 +141,4 @@ public class Old_Id extends AppCompatActivity {
         //  LocalDate date = LocalDate.of();
     }
 
-  /*  public void onclickbutton1(android.view.View view) {
-        Intent intent = new Intent(Old_Id.this,TextRecog.class);
-        startActivity(intent);
-    } */
 }
-

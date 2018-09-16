@@ -3,22 +3,20 @@ package com.example.yohan.newapp;
 import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.util.Log;
 import android.util.SparseArray;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 import android.widget.TextView;
-import java.lang.String;
 
 import com.google.android.gms.vision.CameraSource;
 import com.google.android.gms.vision.Detector;
 import com.google.android.gms.vision.text.TextBlock;
 import com.google.android.gms.vision.text.TextRecognizer;
-
 import java.io.IOException;
 
 
@@ -124,9 +122,8 @@ public class TextRecog extends AppCompatActivity {
 
                                 if(textView.getText().toString().length()==10 && textView.getText().toString().length()==9){
                                     String idno = textView.getText().toString();
-                               //     Intent i1 = new Intent(TextRecog.this,Old_Id.class);
-                                 //   i1.putExtra("text",idno);
-                                   // startActivity(i1);
+                                 Intent i1 = new Intent(TextRecog.this,oldId2.class);
+                                   i1.putExtra("text",idno);startActivity(i1);
                                 }
 
 
