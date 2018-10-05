@@ -11,12 +11,15 @@ import android.util.Log;
 import android.util.SparseArray;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.google.android.gms.vision.CameraSource;
 import com.google.android.gms.vision.Detector;
 import com.google.android.gms.vision.text.TextBlock;
 import com.google.android.gms.vision.text.TextRecognizer;
+
 import java.io.IOException;
 
 
@@ -26,6 +29,8 @@ public class TextRecog extends AppCompatActivity {
     TextView textView;
     CameraSource Camerasource;
     final int RequestCameraPermissionID = 1001;
+
+    Button button;
 
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
@@ -47,12 +52,27 @@ public class TextRecog extends AppCompatActivity {
 
     }
 
+    public void data(final String no){
+
+        button.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent i1 = new Intent(TextRecog.this,oldId2.class);
+                        i1.putExtra("text",no);
+                        startActivity(i1);
+                    }
+                }
+        );
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_text_recog);
         cameraview = findViewById(R.id.surfaceview);
         textView = findViewById(R.id.textview);
+        button = findViewById(R.id.button2);
 
 
         TextRecognizer textRecognizer = new TextRecognizer.Builder(getApplicationContext()).build();
@@ -104,8 +124,10 @@ public class TextRecog extends AppCompatActivity {
 
                 @Override
                 public void receiveDetections(Detector.Detections<TextBlock> detections) {
+
                     final SparseArray<TextBlock> items = detections.getDetectedItems();
                     if(items.size()!=0){
+
                         textView.post(new Runnable() {
                             @Override
                             public void run() {
@@ -118,13 +140,17 @@ public class TextRecog extends AppCompatActivity {
                                 }
 
                                 textView.setText(stringBuilder.toString());
-                                StringBuilder s = new StringBuilder();
+                                //StringBuilder s = new StringBuilder();
 
-                                if(textView.getText().toString().length()==10 && textView.getText().toString().length()==9){
-                                    String idno = textView.getText().toString();
-                                 Intent i1 = new Intent(TextRecog.this,oldId2.class);
-                                   i1.putExtra("text",idno);startActivity(i1);
-                                }
+                               String  idno = textView.getText().toString();
+                               String no = "yohan123";
+                               data(no);
+
+                               // Intent i1 = new Intent(TextRecog.this,oldId2.class);
+                               // i1.putExtra("text",idno);startActivity(i1);
+
+
+
 
 
 
@@ -139,4 +165,8 @@ public class TextRecog extends AppCompatActivity {
 
         }
     }
+
+
+
+
 }

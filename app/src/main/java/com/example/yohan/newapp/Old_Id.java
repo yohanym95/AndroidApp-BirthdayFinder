@@ -27,10 +27,10 @@ public class Old_Id extends AppCompatActivity {
         setSupportActionBar(toolbar2);
        // button1 = findViewById(R.id.button1);
 
-       Intent intent = getIntent();
+     /*  Intent intent = getIntent();
         String id = intent.getStringExtra("text");
 
-        editText3.setText(id);
+        editText3.setText(id);*/
 
     }
 
@@ -49,6 +49,9 @@ public class Old_Id extends AppCompatActivity {
                 Intent i = new Intent(this,HomePage.class);
                 startActivity(i);
                 break;
+            case R.id.Camera:
+                Intent i1 = new Intent(this,TextRecog.class);
+                startActivity(i1);
             case R.id.About:
                 msg = "About";
                 break;

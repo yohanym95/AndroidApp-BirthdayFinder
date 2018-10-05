@@ -7,6 +7,13 @@
         android:orderInCategory="101"
         android:title="Home Page"
         app:showAsAction="never" />
+
+    <item
+        android:id="@+id/Camera"
+        android:orderInCategory="101"
+        android:title="Camera"
+        app:showAsAction="never" />
+
     <item
         android:id="@+id/About"
         android:orderInCategory="101"
@@ -17,6 +24,7 @@
         android:orderInCategory="101"
         android:title="Exit"
         app:showAsAction="never" />
+
 
 
 </menu>
