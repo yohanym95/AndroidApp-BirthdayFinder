@@ -28,10 +28,10 @@ public class oldId2 extends AppCompatActivity {
         setSupportActionBar(toolbar2);
         // button1 = findViewById(R.id.button1);
 
-      /*  Intent intent = getIntent();
+        Intent intent = getIntent();
         String id = intent.getStringExtra("text");
 
-        editText3.setText(id); */
+        editText3.setText("yohan");
 
     }
 
@@ -50,6 +50,9 @@ public class oldId2 extends AppCompatActivity {
                 Intent i = new Intent(this,HomePage.class);
                 startActivity(i);
                 break;
+            case R.id.Camera:
+                Intent i1 = new Intent(this,TextRecog.class);
+                startActivity(i1);
             case R.id.About:
                 msg = "About";
                 break;
@@ -64,7 +67,7 @@ public class oldId2 extends AppCompatActivity {
 
     }
     public void onclickbutton(android.view.View View) {
-        editText3 = findViewById(R.id.editText3);
+      //  editText3 = findViewById(R.id.editText3);
         editText4 = findViewById(R.id.editText4);
         editText5 = findViewById(R.id.editText5);
         String IdNum = editText3.getText().toString();
