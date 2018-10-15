@@ -143,16 +143,11 @@ public class TextRecog extends AppCompatActivity {
                                 //StringBuilder s = new StringBuilder();
 
                                String  idno = textView.getText().toString();
-                               String no = "yohan123";
-                               data(no);
+                             //  String no = "yohan123";
+                                data(idno);
 
                                // Intent i1 = new Intent(TextRecog.this,oldId2.class);
                                // i1.putExtra("text",idno);startActivity(i1);
-
-
-
-
-
 
 
 
