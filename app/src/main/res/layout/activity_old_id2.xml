@@ -25,7 +25,8 @@
             android:onClick="onclickbutton"
             android:text="@string/find"
             android:textColorLink="@color/colorPrimaryDark"
-            android:visibility="visible" />
+            android:visibility="visible"
+            tools:ignore="OnClick" />
 
         <TextView
             android:id="@+id/textView"
