@@ -126,7 +126,7 @@ public class TextRecog extends AppCompatActivity {
                 public void receiveDetections(Detector.Detections<TextBlock> detections) {
 
                     final SparseArray<TextBlock> items = detections.getDetectedItems();
-                    if(items.size()!=0){
+                    if(items.size() == 10){
 
                         textView.post(new Runnable() {
                             @Override
