@@ -58,9 +58,9 @@ public class TextRecog extends AppCompatActivity {
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Intent i1 = new Intent(TextRecog.this,oldId2.class);
+                        Intent i1 = new Intent();
                         i1.putExtra("text",no);
-                        startActivity(i1);
+                        setResult(RESULT_OK,i1);
                     }
                 }
         );

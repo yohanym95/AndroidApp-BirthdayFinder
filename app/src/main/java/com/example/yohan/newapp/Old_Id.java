@@ -20,6 +20,8 @@ public class Old_Id extends AppCompatActivity {
     Button button1;
     Toolbar toolbar2;
 
+    final int OLDACITVITY = 3;
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.old_id);
@@ -51,7 +53,7 @@ public class Old_Id extends AppCompatActivity {
                 break;
             case R.id.Camera:
                 Intent i1 = new Intent(this,TextRecog.class);
-                startActivity(i1);
+                startActivityForResult(i1,OLDACITVITY);
             case R.id.About:
                 msg = "About";
                 break;
@@ -147,5 +149,19 @@ public class Old_Id extends AppCompatActivity {
         Intent intent = new Intent(Old_Id.this,TextRecog.class);
         startActivity(intent);
     } */
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+         if(requestCode == OLDACITVITY){
+             if(resultCode == RESULT_OK){
+                 editText3.setText(data.getStringExtra("text"));
+             }
+             if(resultCode == RESULT_CANCELED){
+                 Toast.makeText(Old_Id.this, "NOT RECEIVED DATA FROM TEXT READER " , Toast.LENGTH_SHORT).show();
+             }
+         }
+
+    }
 }
 
